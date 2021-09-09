@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Modul4HW4;
+using Modul4HW5;
 
-namespace Modul4HW4.Migrations
+namespace Modul4HW5.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210906174554_SetData")]
-    partial class SetData
+    [Migration("20210909124300_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Modul4HW4.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Modul4HW4.Entities.Client", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Client", b =>
                 {
                     b.Property<int>("ClientId")
                         .ValueGeneratedOnAdd()
@@ -98,7 +98,7 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Employee", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Employee", b =>
                 {
                     b.Property<int>("EmployeeId")
                         .ValueGeneratedOnAdd()
@@ -194,7 +194,7 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.EmployeeProject", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.EmployeeProject", b =>
                 {
                     b.Property<int>("EmployeeProjectId")
                         .ValueGeneratedOnAdd()
@@ -268,7 +268,7 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Office", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Office", b =>
                 {
                     b.Property<int>("OfficeId")
                         .ValueGeneratedOnAdd()
@@ -325,7 +325,7 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Project", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Project", b =>
                 {
                     b.Property<int>("ProjectId")
                         .ValueGeneratedOnAdd()
@@ -400,7 +400,7 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Title", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Title", b =>
                 {
                     b.Property<int>("TitleId")
                         .ValueGeneratedOnAdd()
@@ -446,15 +446,15 @@ namespace Modul4HW4.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Employee", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Employee", b =>
                 {
-                    b.HasOne("Modul4HW4.Entities.Office", "Office")
+                    b.HasOne("Modul4HW5.Entities.Office", "Office")
                         .WithMany("Employes")
                         .HasForeignKey("OfficeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Modul4HW4.Entities.Title", "Title")
+                    b.HasOne("Modul4HW5.Entities.Title", "Title")
                         .WithMany("Employes")
                         .HasForeignKey("TitleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -465,15 +465,15 @@ namespace Modul4HW4.Migrations
                     b.Navigation("Title");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.EmployeeProject", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.EmployeeProject", b =>
                 {
-                    b.HasOne("Modul4HW4.Entities.Employee", "Employee")
+                    b.HasOne("Modul4HW5.Entities.Employee", "Employee")
                         .WithMany("EmployeeProjects")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Modul4HW4.Entities.Project", "Project")
+                    b.HasOne("Modul4HW5.Entities.Project", "Project")
                         .WithMany("EmployeeProjects")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -484,9 +484,9 @@ namespace Modul4HW4.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Project", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Project", b =>
                 {
-                    b.HasOne("Modul4HW4.Entities.Client", "Client")
+                    b.HasOne("Modul4HW5.Entities.Client", "Client")
                         .WithMany("Projects")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -495,27 +495,27 @@ namespace Modul4HW4.Migrations
                     b.Navigation("Client");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Client", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Client", b =>
                 {
                     b.Navigation("Projects");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Employee", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Employee", b =>
                 {
                     b.Navigation("EmployeeProjects");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Office", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Office", b =>
                 {
                     b.Navigation("Employes");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Project", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Project", b =>
                 {
                     b.Navigation("EmployeeProjects");
                 });
 
-            modelBuilder.Entity("Modul4HW4.Entities.Title", b =>
+            modelBuilder.Entity("Modul4HW5.Entities.Title", b =>
                 {
                     b.Navigation("Employes");
                 });
