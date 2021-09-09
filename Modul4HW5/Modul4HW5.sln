@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul4HW5", "Modul4HW5\Modul4HW5.csproj", "{726D96BD-82CE-4CF5-85CA-54BF6A5177C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E408FD63-D2C1-4771-B377-86658B0B4687}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		settings.ruleset = settings.ruleset
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{726D96BD-82CE-4CF5-85CA-54BF6A5177C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{726D96BD-82CE-4CF5-85CA-54BF6A5177C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{726D96BD-82CE-4CF5-85CA-54BF6A5177C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{726D96BD-82CE-4CF5-85CA-54BF6A5177C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D94076AB-48C6-4FC3-9AD6-E81A2E016F85}
+	EndGlobalSection
+EndGlobal
