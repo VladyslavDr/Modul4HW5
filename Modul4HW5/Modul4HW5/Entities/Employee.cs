@@ -8,22 +8,22 @@ namespace Modul4HW5.Entities
 {
     public class Employee
     {
-        public int EmployeeId { get; set; }
+        public virtual int EmployeeId { get; set; }
 
-        public string FirstName { get; set; }
+        public virtual string FirstName { get; set; }
 
-        public string LastName { get; set; }
+        public virtual string LastName { get; set; }
 
-        public DateTime HiredData { get; set; }
+        public virtual DateTime HiredData { get; set; }
 
-        public DateTime DataOfBirth { get; set; }
+        public virtual DateTime DataOfBirth { get; set; }
 
-        public int OfficeId { get; set; }
-        public Office Office { get; set; }
+        public virtual int OfficeId { get; set; }
+        public virtual Office Office { get; set; }
 
-        public int TitleId { get; set; }
-        public Title Title { get; set; }
+        public virtual int TitleId { get; set; }
+        public virtual Title Title { get; set; }
 
-        public List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
+        public virtual List<EmployeeProject> EmployeeProjects { get; set; } = new List<EmployeeProject>();
     }
 }

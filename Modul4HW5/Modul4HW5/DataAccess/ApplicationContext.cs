@@ -30,6 +30,7 @@ namespace Modul4HW5
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.UseSqlServer("Server=localhost;Database=HW4DB;Integrated Security=SSPI");
         }
     }

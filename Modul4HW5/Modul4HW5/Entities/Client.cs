@@ -8,11 +8,11 @@ namespace Modul4HW5.Entities
 {
     public class Client
     {
-        public int ClientId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime DataOfBirth { get; set; }
-        public string PhoneNumber { get; set; }
-        public List<Project> Projects { get; set; } = new List<Project>();
+        public virtual int ClientId { get; set; }
+        public virtual string FirstName { get; set; }
+        public virtual string LastName { get; set; }
+        public virtual DateTime DataOfBirth { get; set; }
+        public virtual string PhoneNumber { get; set; }
+        public virtual List<Project> Projects { get; set; } = new List<Project>();
     }
 }

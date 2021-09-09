@@ -8,9 +8,9 @@ namespace Modul4HW5.Entities
 {
     public class Office
     {
-        public int OfficeId { get; set; }
-        public string Title { get; set; }
-        public string Location { get; set; }
-        public List<Employee> Employes { get; set; } = new List<Employee>();
+        public virtual int OfficeId { get; set; }
+        public virtual string Title { get; set; }
+        public virtual string Location { get; set; }
+        public virtual List<Employee> Employes { get; set; } = new List<Employee>();
     }
 }

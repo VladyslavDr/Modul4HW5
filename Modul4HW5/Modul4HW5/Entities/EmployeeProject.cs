@@ -8,16 +8,16 @@ namespace Modul4HW5.Entities
 {
     public class EmployeeProject
     {
-        public int EmployeeProjectId { get; set; }
+        public virtual int EmployeeProjectId { get; set; }
 
-        public decimal Rate { get; set; }
+        public virtual decimal Rate { get; set; }
 
-        public DateTime StartedDate { get; set; }
+        public virtual DateTime StartedDate { get; set; }
 
-        public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public virtual int EmployeeId { get; set; }
+        public virtual Employee Employee { get; set; }
 
-        public int ProjectId { get; set; }
-        public Project Project { get; set; }
+        public virtual int ProjectId { get; set; }
+        public virtual Project Project { get; set; }
     }
 }

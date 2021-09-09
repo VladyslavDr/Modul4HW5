@@ -8,8 +8,8 @@ namespace Modul4HW5.Entities
 {
     public class Title
     {
-        public int TitleId { get; set; }
-        public string Name { get; set; }
-        public List<Employee> Employes { get; set; } = new List<Employee>();
+        public virtual int TitleId { get; set; }
+        public virtual string Name { get; set; }
+        public virtual List<Employee> Employes { get; set; } = new List<Employee>();
     }
 }
