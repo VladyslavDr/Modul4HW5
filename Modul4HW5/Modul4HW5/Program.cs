@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Modul4HW5
 {
@@ -6,7 +9,10 @@ namespace Modul4HW5
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            {
+                var starter = new Starter();
+                starter.Run();
+            }
         }
     }
 }
